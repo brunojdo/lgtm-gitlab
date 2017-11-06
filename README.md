@@ -10,7 +10,7 @@ You should create a access token on your gitlab
 
 ## run lgtm-gitlab
 
-### binrary
+### binary
 ```shell
 ./lgtm --help
   -db_path string
