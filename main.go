@@ -48,7 +48,7 @@ const (
 var (
 	privateToken   = flag.String("token", "", "gitlab private token which used to accept merge request. can be found in https://your.gitlab.com/profile/account")
 	gitlabURL      = flag.String("gitlab_url", "", "e.g. https://your.gitlab.com")
-	validLGTMCount = flag.Int("lgtm_count", 1, "lgtm user count")
+	validLGTMCount = flag.Int("lgtm_count", 2, "lgtm user count")
 	lgtmNote       = flag.String("lgtm_note", NoteLGTM, "lgtm note")
 	logLevel       = flag.String("log_level", "info", "log level")
 	port           = flag.Int("port", 8989, "http listen port")
