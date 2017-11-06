@@ -5,11 +5,10 @@ ENV LGTM_BINARY=lgtm-alpine-linux-amd64-v$LGTM_VERSION.tar.gz
 
 COPY ${LGTM_BINARY} /
 
-RUN apk add --no-cache --virtual .build_deps && \
+RUN apk add --no-cache --virtual .build_deps ca-certificates && \
     cd / && \
     tar -zxvf ${LGTM_BINARY} && \
     chmod +x lgtm && \
-    apk del .build_deps && \
     mkdir /var/lib/lgtm && \
     rm -rf /var/cache/* && \
     rm -rf /tmp/*

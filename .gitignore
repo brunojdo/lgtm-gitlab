@@ -31,5 +31,6 @@ main
 .vagrant
 *.tar.gz
 dist/*
+
 Dockerfile
 reviewers.yaml
