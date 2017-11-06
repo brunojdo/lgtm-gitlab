@@ -7,7 +7,6 @@ COPY ${LGTM_BINARY} /
 
 RUN apk add --no-cache --virtual .build_deps && \
     cd / && \
-    ls -la && \
     tar -zxvf ${LGTM_BINARY} && \
     chmod +x lgtm && \
     apk del .build_deps && \
@@ -16,7 +15,7 @@ RUN apk add --no-cache --virtual .build_deps && \
     rm -rf /tmp/*
 
 ENV LGTM_NOTE=LGTM \
-    LGTM_COUNT=2 \
+    LGTM_COUNT=1 \
     LGTM_PORT=8989 \
     LGTM_TOKEN= \
     LGTM_GITLAB_URL=http://git.epol.splab.ufcg.edu.br \
@@ -26,6 +25,6 @@ ENV LGTM_NOTE=LGTM \
 VOLUME /var/lib/lgtm
 
 CMD ["sh", "-c",\
-    "/lgtm -token $LGTM_TOKEN -gitlab_url $LGTM_GITLAB_URL -lgtm_count $LGTM_COUNT -lgtm_note $LGTM_NOTE -log_level $LGTM_LOG_LEVEL -db_path $LGTM_DB_PATH -port $LGTM_PORT"\
+    "/lgtm -gitlab_url $LGTM_GITLAB_URL -token $LGTM_TOKEN -lgtm_count $LGTM_COUNT -lgtm_note $LGTM_NOTE -log_level $LGTM_LOG_LEVEL -db_path $LGTM_DB_PATH -port $LGTM_PORT"\
 ]
 
