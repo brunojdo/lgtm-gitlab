@@ -17,7 +17,7 @@ ENV LGTM_NOTE=LGTM \
     LGTM_COUNT=1 \
     LGTM_PORT=8989 \
     LGTM_TOKEN= \
-    LGTM_GITLAB_URL=http://git.epol.splab.ufcg.edu.br \
+    LGTM_GITLAB_URL=https://git.epol.splab.ufcg.edu.br \
     LGTM_DB_PATH=/var/lib/lgtm/lgtm.data \
     LGTM_LOG_LEVEL=info
 
